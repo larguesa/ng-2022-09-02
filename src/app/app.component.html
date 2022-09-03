@@ -1,0 +1,20 @@
+<h1>RicardoApp</h1>
+<hr />
+<h2>
+  Nome: <u>{{ name }}</u>
+</h2>
+<h3>
+  Idade: <u>{{ getIdade() }} anos.</u>
+</h3>
+<hr />
+<h2>Contador: {{ counter }}s</h2>
+<h3>{{ getMinutos() }}'{{ getSegundos() }}''</h3>
+<button (click)="restartCounter()">Reiniciar</button>
+<hr />
+<h3>Números aleatórios</h3>
+<button (click)="refreshRandomNumbers()">Gerar</button>
+<div *ngFor="let n of nmbers">
+  {{ n }}:
+  <span *ngIf="n % 2 == 0">PAR</span>
+  <span *ngIf="n % 2 != 0">ÍMPAR</span>
+</div>
